@@ -108,6 +108,10 @@ body {
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+
+    --linear-blue-gradient: linear-gradient(107.3deg,
+        rgb(0, 6, 22) 13.28%,
+        rgb(5, 66, 160) 103.49%);
   }
 
   .dark {
@@ -154,4 +158,46 @@ body {
     color: rgba(0, 0, 0, .9)
   }
 
+  /* Hero section centering fix */
+  .layout-hero .container {
+    max-width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .layout-hero .section-container {
+    width: 100%;
+    height: 100%;
+
+    background-image:
+      linear-gradient(to right,
+        rgba(0, 6, 22, 0.95) 0%,
+        rgba(0, 6, 22, 0.9) 35%,
+        rgba(5, 66, 160, 0.75) 65%,
+        rgba(5, 66, 160, 0.25) 85%,
+        transparent 100%),
+      url("/images/hero-image.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Remove any top padding Bootstrap/ifx adds to first section */
+  .ifx-row-wrapper.layout-hero {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Ensure the section itself has no extra margin */
+  section.d-block:first-of-type {
+    margin-top: 0;
+  }
 }

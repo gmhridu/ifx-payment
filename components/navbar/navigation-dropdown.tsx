@@ -98,7 +98,6 @@ export const NavigationDropdown = ({ item }: { item: NavItem }) => {
                 ))}
               </div>
             ) : (
-              // ✅ Single column — no overflow, no broken grid
               <div className="flex items-center">
                 {item.subItems.map((sub) => (
                   <Link
