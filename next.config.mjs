@@ -5,11 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**", // Allows any HTTPS hostname
-      },
-      {
-        protocol: "http",
-        hostname: "**", // Allows any HTTP hostname
+        hostname: "www.ifxpayments.com",
       },
     ],
   },

@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 export function SectionCard({
@@ -24,12 +25,12 @@ export function SectionCard({
           <p className="mt-3 text-[15px] leading-relaxed text-[#000032]">
             {body}
           </p>
-          <a
+          <Link
             href="#"
             className="mt-6 inline-flex items-center gap-2 text-[14px] md:text-lg font-semibold text-[#0473da] hover:text-[#000032]"
           >
             {cta} <ArrowRightIcon className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
