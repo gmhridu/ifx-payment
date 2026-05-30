@@ -200,4 +200,44 @@ body {
   section.d-block:first-of-type {
     margin-top: 0;
   }
+
+  .gradient-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+
+    border-radius: 9999px;
+
+    background: linear-gradient(135deg,
+        #37ead4 0%,
+        #1097f3 100%);
+
+    overflow: hidden;
+  }
+
+  .gradient-button span {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    text-align: center;
+
+    padding: 8px 24px;
+    border-radius: 9999px;
+
+    background: #02133b;
+
+    transition: all 0.25s ease;
+  }
+
+  .gradient-button:hover span {
+    background: transparent;
+  }
 }

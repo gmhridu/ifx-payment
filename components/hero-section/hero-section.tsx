@@ -27,26 +27,28 @@ export const HeroSection = ({
             <div
               className="section-container"
               style={{
-                backgroundImage: `
-    linear-gradient(
-      107.3deg,
-      rgba(0,6,22,0.92) 20%,
-      rgba(5,66,160,0.75) 108%
-    ),
-     url(${image})
-  `,
-                backgroundSize: "100% auto",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
+                background:
+                  "linear-gradient(107.3deg, rgb(0, 6, 22) 13.28%, rgb(5, 66, 160) 103.49%)",
                 borderRadius: "20px",
                 overflow: "hidden",
                 position: "relative",
                 padding: `${imagePadding}`,
               }}
             >
-              {/* Gradient Overlay */}
-              {/* <div className="absolute inset-0 bg-linear-to-r from-[#000032] to-[#0542a0] hover:opacity-90 transition-opacity whitespace-nowrap overflow-hidden" /> */}
+              {image && (
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    backgroundImage: `url(${image})`,
+                    backgroundPosition: "right bottom",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "auto 115%",
+                    zIndex: 0,
+                  }}
+                />
+              )}
 
+              {/* Content - unchanged */}
               <div
                 className="row justify-content-md-start"
                 style={{ position: "relative", zIndex: 2 }}
@@ -76,7 +78,6 @@ export const HeroSection = ({
                     >
                       {title}
                     </h1>
-
                     <p
                       style={{
                         color: "rgba(255,255,255,0.85)",
@@ -88,14 +89,11 @@ export const HeroSection = ({
                     >
                       {description}
                     </p>
-
-                    <LinkButton
-                      href="/contact"
-                      buttonText="Speak to our team"
-                    />
+                    <div>
+                      <LinkButton href="/contact" buttonText="Speak to our team" />
+                    </div>
                   </div>
                 </div>
-
                 <div className="col-lg-6" />
               </div>
             </div>
