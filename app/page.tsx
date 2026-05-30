@@ -1,71 +1,10 @@
 "use client";
 
+import { HeroSection } from "@/components/hero-section/hero-section";
 import { Navbar } from "@/components/navbar";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState, type ReactNode, type CSSProperties } from "react";
 
-const nav = [
-  {
-    label: "Solutions",
-    href: "#",
-    sections: [
-      {
-        title: "Payment solutions",
-        items: [
-          {
-            label: "Multi Currency Accounts",
-            href: "https://www.ifxpayments.com/payment-solutions/multi-currency-accounts/",
-          },
-          {
-            label: "Mass Payments",
-            href: "https://www.ifxpayments.com/payment-solutions/mass-payments/",
-          },
-          {
-            label: "API",
-            href: "https://www.ifxpayments.com/payment-solutions/api/",
-          },
-        ],
-      },
-      {
-        title: "Foreign Exchange",
-        items: [
-          {
-            label: "Business",
-            href: "https://www.ifxpayments.com/foreign-exchange/business/",
-          },
-          {
-            label: "Personal",
-            href: "https://www.ifxpayments.com/foreign-exchange/personal/",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Who we work with",
-    href: "#",
-    items: [
-      { label: "Fintechs", href: "https://www.ifxpayments.com/fintechs/" },
-      { label: "Businesses", href: "https://www.ifxpayments.com/businesses/" },
-      {
-        label: "Individuals",
-        href: "https://www.ifxpayments.com/foreign-exchange/personal/",
-      },
-    ],
-  },
-  { label: "Markets", href: "https://www.ifxpayments.com/markets/" },
-  { label: "Partners", href: "https://www.ifxpayments.com/partners/" },
-  { label: "Resources", href: "https://www.ifxpayments.com/resources/" },
-  {
-    label: "Company",
-    href: "#",
-    items: [
-      { label: "About us", href: "https://www.ifxpayments.com/about-us/" },
-      { label: "Work with us", href: "https://www.ifxpayments.com/careers/" },
-      { label: "Contact", href: "https://www.ifxpayments.com/contact/" },
-    ],
-  },
-];
 
 const currencies: { code: string; flag: string }[] = [
   { code: "GBP", flag: "🇬🇧" },
@@ -194,61 +133,9 @@ const articles = [
   },
 ];
 
-function Logo() {
-  return (
-    <a href="/" className="flex items-center gap-0 leading-none">
-      <div className="flex flex-col items-start">
-        <div className="text-[28px] font-extrabold tracking-tight text-navy">
-          IF<span className="relative">X</span>
-        </div>
-        <div className="text-[9px] font-semibold tracking-[0.28em] text-navy mt-0.5">
-          PAYMENTS
-        </div>
-      </div>
-    </a>
-  );
-}
 
 function Header() {
   return <Navbar />;
-}
-
-function Hero() {
-  return (
-    <section className="px-3 sm:px-6 pt-3">
-      <div className="relative mx-auto max-w-[1380px] overflow-hidden rounded-[28px] bg-navy-deep">
-        <img
-          src="/hero-globe.jpg"
-          alt="Glowing globe with currency pins representing global cross-border payments"
-          className="absolute inset-0 h-full w-full object-cover opacity-90"
-          width={1600}
-          height={1024}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent" />
-        <div className="relative grid min-h-[600px] grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col justify-center px-8 sm:px-16 py-20 text-white">
-            <h1 className="text-[44px] sm:text-[64px] lg:text-[76px] font-extrabold leading-[0.98] tracking-tight text-white">
-              Move money
-              <br />
-              with confidence
-            </h1>
-            <p className="mt-7 max-w-md text-[17px] leading-relaxed text-white/85">
-              One place for seamless cross-border payments and FX, helping you
-              reach new markets and grow globally.
-            </p>
-            <div className="mt-10">
-              <a
-                href="#contact"
-                className="inline-flex items-center rounded-full border-2 border-accent px-7 py-3.5 text-[15px] font-semibold text-white hover:bg-accent hover:text-navy-deep transition-colors"
-              >
-                Speak to our team
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
 }
 
 function SectionHead({
@@ -961,7 +848,11 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
+        <HeroSection
+          image="/images/hero-image.png"
+          title="Move money with confidence"
+          description="One place for seamless cross-border payments and FX, helping you reach new markets and grow globally."
+        />
         <PaymentSolutions />
         <CurrencyTicker />
         <CurrencyExchange />
