@@ -1,4 +1,4 @@
-import { CurrencyItem } from "@/components/currency-ticker/currency-ticker";
+import { CurrencyItem } from "@/components/home/currency-ticker/currency-ticker";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -80,4 +80,3 @@ export const currencies: CurrencyItem[] = [
       "https://www.ifxpayments.com/wp-content/themes/tf-ifx-2021/img/flags/sweden.png",
   },
 ];
-

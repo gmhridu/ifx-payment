@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
+import { LinkButton } from "@/components/common/link-button";
 import { ReactNode } from "react";
 
-
-function Field({
+export function Field({
   label,
   required,
   children,
@@ -23,7 +23,7 @@ function Field({
   );
 }
 
-function TextInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
+export function TextInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       {...props}
@@ -32,7 +32,7 @@ function TextInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
   );
 }
 
-function SelectInput({
+export function SelectInput({
   children,
   ...props
 }: React.SelectHTMLAttributes<HTMLSelectElement>) {
@@ -45,9 +45,6 @@ function SelectInput({
     </select>
   );
 }
-
-
-
 
 export function Contact() {
   return (
@@ -153,12 +150,7 @@ export function Contact() {
             </p>
 
             <div className="flex justify-end pt-2">
-              <button
-                type="submit"
-                className="rounded-full border-2 border-accent px-10 py-3 text-[14px] font-semibold text-white hover:bg-accent hover:text-navy-deep transition-colors"
-              >
-                Submit
-              </button>
+              <LinkButton type="submit" buttonText="Submit" />
             </div>
           </form>
         </div>

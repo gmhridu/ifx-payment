@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "lucide-react";
-import { SectionHead } from "../common/section-head";
+import { SectionHead } from "../../common/section-head";
 import Link from "next/link";
 
 export function CurrencyExchange() {

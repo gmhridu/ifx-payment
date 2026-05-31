@@ -1,4 +1,4 @@
-import { SectionHead } from "../common/section-head";
+import { SectionHead } from "../../common/section-head";
 
 const partners = [
   {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SectionHead } from "../common/section-head";
+import { SectionHead } from "@/components/common/section-head";
 
 const testimonials = [
   {
@@ -41,7 +41,6 @@ const testimonials = [
     company: "Britannia Movers International",
   },
 ];
-
 
 export function Testimonials() {
   const perPage = 2;
