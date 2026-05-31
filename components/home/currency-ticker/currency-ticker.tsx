@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { LinkButton } from "../common/link-button";
+import { LinkButton } from "../../common/link-button";
 import { currencies } from "@/lib/utils";
 
 export interface CurrencyItem {
@@ -59,6 +59,7 @@ export const CurrencyTicker = () => {
                   <LinkButton
                     href="/payment-networks-covarage"
                     buttonText="View supported currencies"
+                    className="text-white"
                   />
                 </div>
                 <div className="mt-12 max-w-140">

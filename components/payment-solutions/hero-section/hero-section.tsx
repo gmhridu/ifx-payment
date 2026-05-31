@@ -1,4 +1,4 @@
-import { LinkButton } from "../common/link-button";
+import { LinkButton } from "@/components/common/link-button";
 
 interface HeroSectionProps {
   image?: string;
@@ -40,9 +40,9 @@ export const HeroSection = ({
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     backgroundImage: `url(${image})`,
-                    backgroundPosition: "right bottom",
+                    backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "auto 115%",
+                    backgroundSize: "auto 120%",
                     zIndex: 0,
                   }}
                 />
@@ -64,6 +64,15 @@ export const HeroSection = ({
                       justifyContent: "center",
                     }}
                   >
+                    <div>
+                      <span className="items-center bg-[linear-gradient(107.3deg,rgb(0,6,22)_13.28%,rgb(5,66,160)_103.49%)] box-border caret-transparent text-white gap-x-2 inline-flex tracking-[0.2px] leading-[normal] gap-y-2 no-underline text-nowrap mb-8 pl-2 pr-5 py-2 rounded-[50px] border border-[#34A7FF]">
+                        <img
+                          src="/images/multi-currency.svg"
+                          alt="Multi Currency"
+                        />
+                        Payment solutions for business{" "}
+                      </span>
+                    </div>
                     <h1
                       className="section-title"
                       style={{
@@ -89,8 +98,17 @@ export const HeroSection = ({
                     >
                       {description}
                     </p>
-                    <div>
-                      <LinkButton href="/contact" buttonText="Speak to our team" />
+                    <div className="flex gap-4 items-center">
+                      <LinkButton
+                        href="/contact"
+                        buttonText="Speak to our team"
+                        className="text-white"
+                      />
+                      <LinkButton
+                        href="/payments-networks-coverage"
+                        buttonText="View supported currencies"
+                        className="bg-[linear-gradient(107.3deg,rgb(0,6,22)_13.28%,rgb(5,66,160)_103.49%)] border-none text-white"
+                      />
                     </div>
                   </div>
                 </div>

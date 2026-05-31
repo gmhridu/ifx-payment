@@ -88,7 +88,7 @@ export const Footer = () => {
                 <ul className="box-border caret-transparent  no-underline mb-10 pl-0 md:mb-4">
                   <li className="box-border caret-transparent list-none  no-underline mb-1.5">
                     <a
-                      href="https://www.ifxpayments.com/payment-solutions/"
+                      href="/payment-solutions/"
                       className="box-border caret-transparent inline-block  no-underline"
                     >
                       Payment solutions
